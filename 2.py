@@ -5,7 +5,6 @@ import queue
 from pprint import pprint
 import json
 
-
 BASE_URL = 'https://ru.wikipedia.org'
 FIRST = '/w/index.php?title=Категория:Животные_по_алфавиту&from=А'
 
@@ -28,6 +27,7 @@ class DataColection(threading.Thread):
             return True
         except:
             return False
+
 
 def get_wiki_data():
     threads = []

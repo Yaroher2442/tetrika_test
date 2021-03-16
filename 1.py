@@ -1,12 +1,16 @@
 def task(array):
-    #list.index
+    # list.index
     return list(array).index('0')
-#Сложность O(n)
+
+
+# Сложность O(n)
 
 def task_1(array):
     # str.index
     return array.index('0')
-#Сложность O(n)
+
+
+# Сложность O(n)
 
 def task_2(array):
     # my for
@@ -15,7 +19,9 @@ def task_2(array):
             return i
         else:
             continue
-#Сложность O(n)
+
+
+# Сложность O(n)
 
 def main():
     print(task("111111111111111111000000000000000000"))
