@@ -5,8 +5,6 @@ import queue
 from pprint import pprint
 import json
 
-from celery import Celery
-celery_app = Celery(broker='redis://localhost:6379/0')
 
 BASE_URL = 'https://ru.wikipedia.org'
 FIRST = '/w/index.php?title=Категория:Животные_по_алфавиту&from=А'
@@ -31,9 +29,7 @@ class DataColection(threading.Thread):
         except:
             return False
 
-
-@celery_app.task(bind=True)
-def get_wiki_data(self):
+def get_wiki_data():
     threads = []
     out_queue = queue.Queue()
     curent_liter = 'q'
